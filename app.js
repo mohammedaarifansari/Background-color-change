@@ -1,31 +1,13 @@
-let body = document.querySelector("body");
-let buttons = document.querySelectorAll(".btn");
+let screen = document.querySelector(".screen");
+let btn = document.querySelector("#btn");
 
-buttons.forEach(function (btn){
-  btn.addEventListener('click', function (e){
-    if (e.target.id ==='green'){
-      body.style.backgroundColor=e.target.id;
-    }
-    if (e.target.id ==='white'){
-      body.style.backgroundColor=e.target.id;
-    }
-    if (e.target.id ==='orange'){
-      body.style.backgroundColor=e.target.id;
-    }
-    if (e.target.id ==='blue'){
-      body.style.backgroundColor=e.target.id;
-    }
-    if (e.target.id ==='violet'){
-      body.style.backgroundColor=e.target.id;
-    }
-    if (e.target.id ==='red'){
-      body.style.backgroundColor=e.target.id;
-    }
-    if (e.target.id ==='purple'){
-      body.style.backgroundColor=e.target.id;
-    }
-    if (e.target.id ==='indigo'){
-      body.style.backgroundColor=e.target.id;
-    }
-  })
+btn.addEventListener("click",function (){
+  
+  let red = Math.floor(Math.random() * 255);
+  let green = Math.floor(Math.random() * 255);
+  let blue = Math.floor(Math.random() * 255);
+  let allcolor = `rgb(${red},${green},${blue})`;
+
+  screen.style.backgroundColor = allcolor;
+
 });
